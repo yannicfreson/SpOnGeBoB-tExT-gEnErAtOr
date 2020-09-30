@@ -1,7 +1,10 @@
-let input = prompt('What do you wanna SpOnGeBoBiFy ?')
+let input = document.getElementById('inputText').value
 let output = ''
+let random = false
 
-function spongebobify(random) {
+function spongebobify() {
+    input = document.getElementById('inputText').value
+    output = ''
     if (random) {
         for (i = 0; i < input.length; i++) {
             let upperCase = (Math.random() < 0.5)
@@ -20,12 +23,17 @@ function spongebobify(random) {
             }
         }
     }
+    document.getElementById('output').textContent = output
 }
 
-spongebobify
-
-document.getElementById('Output').textContent = output
-
-document.addEventListener('click', function (click) {
-    if (click.target.classList.contains('Random'))
+document.addEventListener('click', click => {
+    if (click.target == document.getElementById('random')) {
+        random = true
+        spongebobify()
+    } else if (click.target == document.getElementById('alternate')) {
+        random = false
+        spongebobify()
+    } else if (click.target == document.getElementById('spongebobify')) {
+        spongebobify()
+    }
 })
