@@ -1,8 +1,7 @@
 let input = document.getElementById('inputText').value
 let output = ''
-let random = false
 
-function spongebobify() {
+function spongebobify(random) {
     input = document.getElementById('inputText').value
     output = ''
     if (random) {
@@ -28,12 +27,8 @@ function spongebobify() {
 
 document.addEventListener('click', click => {
     if (click.target == document.getElementById('random')) {
-        random = true
-        spongebobify()
+        spongebobify(true)
     } else if (click.target == document.getElementById('alternate')) {
-        random = false
-        spongebobify()
-    } else if (click.target == document.getElementById('spongebobify')) {
-        spongebobify()
+        spongebobify(false)
     }
 })
