@@ -5,23 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Spongebob Text Generator</title>
+    <title>Text transformer</title>
 </head>
 
-<body style="background-color: rgb(54, 57, 63);">
-    <section>
-        <button id="random" class="btn">Random Spongebobify</button>
-    </section>
-    <section>
-        <button id="alternate" class="btn">Alternate Spongebobify</button>
-    </section>
-
-    <section>
-        <input type="text" id="inputText" size="50vw" style="font-size: 5vh;">
-    </section>
-
-    <div id="output"
-        style="font-size: 10vh; color:white; text-align: center; font-family: Arial, Helvetica, sans-serif;"></div>
+<body>
+    <h1 id="title" class="title">Spongebob text generator</h1>
+    <div class="container">
+        <textarea class="input" type="text" id="inputText" placeholder="Enter text"></textarea>
+        <div class="controls">
+            <button id="random" class="btn">Random</button>
+            <button id="alternate" class="btn">Alternate</button>
+        </div>
+        <div id="outputText" class="output">EnTeR tExT</div>
+    </div>
 
     <script src="code.js"></script>
 </body>
